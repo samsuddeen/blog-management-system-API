@@ -247,6 +247,20 @@ List all posts (public)
  php artisan db:seed --class=PostSeeder
  php artisan db:seed --class=CategorySeeder
 
+ As a bonus, a basic Admin Dashboard UI has also been developed.
+
+Allows admin users to:
+
+Login via web
+
+Manage  Categories, and Users (via GUI)
+
+View role-based access in action
+
+Implemented using Laravel's Blade templating engine
+
+Included to demonstrate full-stack capability beyond API
+
 
 
 
