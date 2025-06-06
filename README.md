@@ -239,6 +239,9 @@ List all posts (public)
 #bonus
  If you want more than 1000 data in the posts table, run this separately:
  php artisan db:seed --class=PostSeeder
+ php artisan db:seed --class=CategorySeeder
+
+
 
 
 
