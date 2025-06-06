@@ -60,6 +60,8 @@ cd blog-management-system-API
 composer install
 npm install
 
+php artisan key:generate
+
 3️⃣ Configure Environment
 
 Rename .env_backup to .env and update database credentials:
@@ -101,6 +103,10 @@ Also, update your .env file:
 
 APP_URL=http://127.0.0.1:8000
 
+Since the project uses Laravel File Manager, run:
+php artisan storage:link
+
+
 7️⃣ Run the Application
 
 php artisan serve
@@ -113,6 +119,9 @@ Admin Login
 
 Email: admin@gmail.com
 Password: admin123
+
+
+
 
 
 API Endpoints
@@ -225,5 +234,11 @@ GET
 ❌
 
 List all posts (public)
+
+
+#bonus
+ If you want more than 1000 data in the posts table, run this separately:
+ php artisan db:seed --class=PostSeeder
+
 
 
