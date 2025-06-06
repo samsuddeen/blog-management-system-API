@@ -60,7 +60,6 @@ cd blog-management-system-API
 composer install
 npm install
 
-php artisan key:generate
 
 3️⃣ Configure Environment
 
@@ -78,6 +77,9 @@ DB_PORT=3306
 DB_DATABASE=blogs_management_api
 DB_USERNAME=root
 DB_PASSWORD=''
+
+php artisan key:generate
+
 
 4️⃣ Import Database
 
