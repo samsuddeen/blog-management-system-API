@@ -1,12 +1,42 @@
-Blog Management System (Laravel 10)
+# Blog Management System (API)
 
-This is a simple Blog Management System built using Laravel 10. It allows admins to manage blog posts and provides API endpoints for frontend consumption.
+A Laravel 10-based API for managing blog posts, categories, and users with token-based authentication, role-based permissions, and Excel import/export functionality. Built to assess real-world Laravel development skills as per the provided task requirements.
 
-Features
+## Features
 
-✅ User Authentication (Admin & User roles)✅ Blog CRUD Operations (Create, Read, Update, Delete)✅ Blog Categories Management✅ REST API for blogs with authentication using Laravel Sanctum✅ File Uploads using Laravel File Manager
+✅ **User Authentication & Role Permissions**
+   - Token-based authentication using Laravel Sanctum.
+   - Role and permission management using Spatie Laravel Permission.
+   - Roles: `admin`, `editor`.
+   - Permissions: `post-create`, `post-edit`, `post-delete`, `category-manage`, `user-manage`.
+   - Restricted access to routes based on permissions.
 
-System Requirements
+✅ **Post Management**
+   - Authenticated users with appropriate permissions can create, update, and delete posts.
+   - Post fields: `title`, `body`, `category_id`, `author_id`.
+   - Only the post author or admin can edit/delete a post.
+
+✅ **Category Management**
+   - Admins can create, list, and delete categories.
+   - Prevents deletion of categories with associated posts.
+   - Supports Excel import/export for categories.
+   - Soft delete with force delete and restore functionality.
+
+✅ **Public Post Listing**
+   - Public endpoint (`/api/public/posts`) to list all posts without authentication.
+   - Includes: `title`, `author_name`, `category_name`, `created_at`.
+
+✅ **Excel Import/Export**
+   - Export all categories and posts to Excel.
+   - Import categories from Excel with columns: `name`, `slug`.
+
+✅ **Bonus Features**
+   - FormRequest for validation.
+   - API Resources for response formatting.
+   - Unit tests for key routes (in `tests/Feature/PostTest.php`).
+   - Large data export support (tested with 1000+ categories).
+
+## System Requirements
 
 PHP 8.1 or later
 
