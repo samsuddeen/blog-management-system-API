@@ -23,7 +23,7 @@ Follow these steps to set up and run the project:
 1️⃣ Clone the Repository
 
 git clone https://github.com/samsuddeen/blog-management-system-API.git
-cd Blog_Management
+cd blog-management-system-API
 
 2️⃣ Install Dependencies
 
