@@ -113,6 +113,10 @@ php artisan serve
 
 Now, visit http://127.0.0.1:8000 in your browser.
 
+and another terminal if you are open in web
+then also run 
+npm run dev
+
 Admin & User Login Credentials
 
 Admin Login
