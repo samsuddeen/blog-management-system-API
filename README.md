@@ -22,7 +22,7 @@ Follow these steps to set up and run the project:
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/samsuddeen/Blog_Management.git
+git clone https://github.com/samsuddeen/blog-management-system-API.git
 cd Blog_Management
 
 2️⃣ Install Dependencies
@@ -33,6 +33,8 @@ npm install
 3️⃣ Configure Environment
 
 Rename .env_backup to .env and update database credentials:
+
+or 
 
 cp .env_backup .env
 
@@ -82,45 +84,116 @@ Admin Login
 Email: admin@gmail.com
 Password: admin123
 
-User Login
-
-Email: user@gmail.com
-Password: user123
 
 API Endpoints
-I already Pushed Postman Collection named "Blog management.postman_collection.json"
+I already Pushed Postman Collection named "Blog Management API.postman_collection.json"
 
 Method
 
 Endpoint
 
+method
 
-GET
+Route
 
-/api/blogs
+Auth
 
-Get all blog posts
-
-GET
-
-/api/blog/{id}
-
-Get a specific blog post
+Description
 
 POST
 
-/api/blogs
+/api/register
 
-Create a new blog post (Authenticated)
+❌
+
+Register user
+
+POST
+
+/api/login
+
+❌
+
+Login and get token
+
+GET
+
+/api/posts
+
+✅
+
+List all posts
+
+POST
+
+/api/posts
+
+✅
+
+Create new post
 
 PUT
 
-/api/blog/{id}
+/api/posts/{id}
 
-Update blog post (Authenticated)
+✅
+
+Update post
 
 DELETE
 
-/api/blog/{id}
+/api/posts/{id}
 
-Delete blog post (Authenticated)
+✅
+
+Delete post
+
+GET
+
+/api/categories
+
+✅
+
+List all categories
+
+POST
+
+/api/categories
+
+✅
+
+Add a category
+
+DELETE
+
+/api/categories/{id}
+
+✅
+
+Delete a category
+
+POST
+
+/api/categories/import
+
+✅
+
+Import from Excel
+
+GET
+
+/api/categories/export
+
+✅
+
+Export to Excel
+
+GET
+
+/api/public/posts
+
+❌
+
+List all posts (public)
+
+
