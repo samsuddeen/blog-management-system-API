@@ -38,7 +38,7 @@ A Laravel 10-based API for managing blog posts, categories, and users with token
 
 ## System Requirements
 
-PHP 8.1 or later
+PHP 8.2 or later
 
 Composer
 
