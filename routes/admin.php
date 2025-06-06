@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Web\PostController;
 
 Route::group(['middleware' => ['web', 'admin']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
@@ -13,6 +14,7 @@ Route::group(['middleware' => ['web', 'admin']], function () {
 Route::get('dashboard', function () {
     $data['total_user'] = \App\Models\User::count();
     $data['total_categories'] = \App\Models\Category::count();
+    $data['total_posts'] = \App\Models\Post::count();
 
 
     return view('admin.index',$data);
@@ -31,10 +33,10 @@ Route::post('category/change-status/{id}', [CategoryController::class, 'changest
 Route::delete('/category/{id}/force-delete', [CategoryController::class, 'forceDelete'])->name('category.forceDelete');
 Route::post('/category/{id}/restore', [CategoryController::class, 'restore'])->name('category.restore');
 
-// Route::resource('post', PostController::class);
-// Route::post('post/change-status/{id}', [PostController::class, 'changestatus']);
-// Route::delete('/post/{id}/force-delete', [PostController::class, 'forceDelete'])->name('post.forceDelete');
-// Route::post('/post/{post}/restore', [PostController::class, 'restore'])->name('blog.restore');
+Route::resource('post', PostController::class);
+Route::post('post/change-status/{id}', [PostController::class, 'changestatus']);
+Route::delete('/post/{id}/force-delete', [PostController::class, 'forceDelete'])->name('post.forceDelete');
+Route::post('/post/{post}/restore', [PostController::class, 'restore'])->name('blog.restore');
 
 
 Route::get('backup', [UserController::class, 'backup'])->name('backup.service');

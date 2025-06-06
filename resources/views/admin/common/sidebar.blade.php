@@ -47,13 +47,13 @@
                     </a>
                 </li>
 
-                {{-- <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('blog.index') ? 'active' : '' }}"
-                        href="{{ route('blog.index') }}">
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('post.index') ? 'active' : '' }}"
+                        href="{{ route('post.index') }}">
                         <i data-feather="file-text" class="nav-icon me-2 icon-xxs"></i>
-                        Blogs
+                        Posts
                     </a>
-                </li> --}}
+                </li>
 
 
 

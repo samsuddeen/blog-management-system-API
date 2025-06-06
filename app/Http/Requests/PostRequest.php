@@ -26,9 +26,10 @@ class PostRequest extends FormRequest
       return [
             'title' => 'required|string',
             'body' => 'nullable',
-            'slug' => 'required|string|unique:posts,slug,',
+            'slug' => 'nullable|string|unique:posts,slug,',
             'category_id' => 'required|exists:categories,id',
             'status' => 'required',
+            'image'=>'nullable'
 
         ];
     }

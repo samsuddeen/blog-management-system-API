@@ -42,7 +42,7 @@
                         </div>
                     </a>
                 </div>
-                {{-- <div class="col-xl-3 col-lg-6 col-md-12 col-12 mb-5">
+                <div class="col-xl-3 col-lg-6 col-md-12 col-12 mb-5">
                     <a href="" class="text-decoration-none">
                         <div class="card h-100 card-lift">
                             <div class="card-body">
@@ -55,12 +55,12 @@
                                     </div>
                                 </div>
                                 <div class="lh-1">
-                                    <h1 class="mb-1 fw-bold">{{ $total_blogs ?? '' }}</h1>
+                                    <h1 class="mb-1 fw-bold">{{ $total_posts ?? '' }}</h1>
                                 </div>
                             </div>
                         </div>
                     </a>
-                </div> --}}
+                </div>
                 <div class="col-xl-3 col-lg-6 col-md-12 col-12 mb-5">
                     <a href="{{ route('category.index') }}" class="text-decoration-none">
                         <div class="card h-100 card-lift">
