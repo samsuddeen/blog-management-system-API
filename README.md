@@ -123,8 +123,8 @@ Admin & User Login Credentials
 
 Admin Login
 
-Email: admin@gmail.com
-Password: admin123
+Email: admin@admin.com
+Password: password
 
 
 
