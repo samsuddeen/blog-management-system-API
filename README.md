@@ -43,15 +43,15 @@ Update database settings in .env file:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=blogs_management
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+DB_DATABASE=blogs_management_api
+DB_USERNAME=root
+DB_PASSWORD=''
 
 4️⃣ Import Database
 
-The database dump file is provided in the repository (blogs_management.sql). Import it using:
+The database dump file is provided in the repository (blogs_management_api.sql). Import it using:
 
-mysql -u your_username -p blogs_management < blogs_management.sql
+mysql -u your_username -p blogs_management < blogs_management_api.sql
 
 OR import manually using phpMyAdmin.
 
